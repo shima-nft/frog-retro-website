@@ -1,0 +1,65 @@
+/* レトロな1990年代スタイル */
+body {
+    background-color: #000080; /* ディープブルー */
+    color: #FFFF00; /* イエロー */
+    font-family: 'PixelMplus10-Regular', 'MS PGothic', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 128, 0.8);
+    border: 2px solid #FFD700;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #FFD700;
+    text-align: center;
+    margin-top: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+/* カエルのドット絵 */
+.frog {
+    width: 50px;
+    height: 50px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="#00FF00" d="M8 16c-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8zm0-14c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm-2 10a2 2 0 1 1 4 0 2 2 0.001 0-4 0z"/><path fill="#000000" d="M6 7a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/><path fill="#000000" d="M10 7a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/><path fill="#000000" d="M8 10a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.frog-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* レトロなボーダー */
+.retro-border {
+    border: 2px solid #FFD700;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* フラッシュ効果 */
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.flash {
+    animation: flash 2s infinite;
+}
