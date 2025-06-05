@@ -1,6 +1,7 @@
 /* レトロな1990年代スタイル */
 body {
-    background-color: #000080; /* ディープブルー */
+    background: linear-gradient(135deg, #000080, #000000); /* ディープブルーからブラックへのグラデーション */
+    background-attachment: fixed;
     color: #FFFF00; /* イエロー */
     font-family: 'PixelMplus10-Regular', 'MS PGothic', monospace;
     line-height: 1.6;
@@ -15,13 +16,16 @@ body {
     border: 2px solid #FFD700;
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
 h1 {
     color: #FFD700;
     text-align: center;
     margin-top: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    font-family: 'Press Start 2P', 'PixelMplus10-Regular', 'MS PGothic', monospace;
+    letter-spacing: 2px;
     text-shadow: 2px 2px 4px #000000;
 }
 
@@ -38,6 +42,13 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s;
+}
+
+.frog:hover {
+    animation-play-state: paused;
+    transform: scale(1.2);
 }
 
 .frog-container {
@@ -62,4 +73,9 @@ p {
 
 .flash {
     animation: flash 2s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
